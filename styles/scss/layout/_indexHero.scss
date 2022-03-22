@@ -1,0 +1,163 @@
+.topContainers {
+  padding: 5%;
+  padding-top: 30%;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 500px) {
+    padding-top: 20%;
+  }
+}
+
+.heading__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__title {
+  padding: 0 8% 5% 8%;
+  font-size: 1.6em;
+  font-weight: 700;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 2em;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 2.5em;
+  }
+}
+.aqua-text {
+  color: $aqua;
+}
+
+.ilustra-header {
+  max-width: 90%;
+
+  @media screen and (min-width: $tablet) {
+    width: 60%;
+  }
+}
+
+.search__container {
+  margin: 0 auto;
+  border: 1px solid $purple;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  top: -5px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  body.darkMode & {
+    border: 1px solid #fff;
+  }
+
+  .search__input {
+    width: 100%;
+    border: none;
+    padding-left: 3%;
+    background-color: none;
+    font-family: $primary-font;
+    font-size: 16px;
+    color: $lightGray;
+    outline: none;
+
+    body.darkMode & {
+      background-color: transparent;
+    }
+  }
+
+  .search__icon {
+    width: 1.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .search__btn {
+    width: 1.25rem;
+    margin-left: 0.5rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 55%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 75%;
+  }
+}
+
+//  Sugerencias de busqueda
+
+.SearchSuggestions__container {
+  border: 1px solid $purple;
+  border-top-color: transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0 auto;
+  width: 100%;
+
+  body.darkMode & {
+    border: 1px solid #fff;
+  }
+
+  .suggestions-line {
+    width: 95%;
+    margin: 0 auto 2% auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 55%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 75%;
+  }
+}
+
+.search-sugestion-list {
+  color: $lightGray;
+}
+
+.SearchSuggestions__item {
+  display: flex;
+  padding: 0.5rem;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.search__btnGray {
+  width: 1rem;
+  margin: 0 2%;
+}
+
+.search__Text {
+  margin: 0 10px;
+  display: block;
+}
+
+.search-close-icon {
+  margin-right: 2%;
+}
+
+#search__container.searchActive {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+
+#searchSuggestions__container.searchActiveContainer {
+  border-top-color: transparent;
+  position: relative;
+  top: -0.5rem;
+}
+
+.search {
+  position: relative;
+}

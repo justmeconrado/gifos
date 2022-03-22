@@ -1,0 +1,11 @@
+body {
+  font-family: $primary-font;
+  color: $purple;
+  font-weight: 400;
+  transition: $transition;
+
+  &.darkMode {
+    background-color: $backgroundDark;
+    color: $white;
+  }
+}

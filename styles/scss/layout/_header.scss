@@ -1,0 +1,172 @@
+.header__container {
+  width: 100%;
+  border-top: 5px solid $purple;
+  padding: 2% 10% 1.5% 10%;
+  position: fixed;
+  background-color: white;
+  transition: $transition;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  margin-left: auto;
+  margin-right: auto;
+
+  body.darkMode & {
+    background-color: $backgroundDark;
+    border: none;
+  }
+}
+
+.logo__link {
+  .logo__imagen {
+    width: 3rem;
+
+    @media screen and (min-width: $tablet) {
+      width: 3.7rem;
+    }
+  }
+}
+
+.navbar {
+  float: right;
+
+  &__burguer {
+    cursor: pointer;
+    padding: 1rem;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .lines {
+    width: 12%;
+    margin: 0 auto;
+    border: 0.2px solid rgba(211, 211, 211, 0.493);
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    height: 100vh;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: transparentize($purple, 0.1);
+    text-align: center;
+
+    body.darkMode & {
+      background-color: $backgroundBlack;
+    }
+
+    @media screen and (min-width: $tablet) {
+      height: 100%;
+      position: relative;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: transparent;
+
+      body.darkMode & {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 3.5em;
+    letter-spacing: 0.5px;
+    color: #fff;
+
+    @media screen and (min-width: $tablet) {
+      width: fit-content;
+      padding-top: 1rem;
+      line-height: 1.5rem;
+      color: $purple;
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom: 2px solid $aqua;
+      }
+
+      &:active {
+        color: $lightGray;
+        border-bottom: hidden;
+      }
+    }
+
+    body.darkMode & {
+      color: white;
+    }
+  }
+}
+
+.navbarSearch__container {
+  width: 30%;
+  height: 60%;
+  padding: 1%;
+  border: 1px solid $purple;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  body.darkMode & {
+    border: 1px solid #fff;
+  }
+
+  .navbarSearch__input {
+    width: 100%;
+    padding-left: 3%;
+    border: none;
+    color: $lightGray;
+
+    font-family: $primary-font;
+    font-size: 14px;
+    outline: none;
+
+    body.darkMode & {
+      color: #9cafc3;
+      background-color: transparent;
+    }
+  }
+}
+
+.navbarSearch__icon {
+  padding-right: 10px;
+}
+
+.navbarSearch__btn {
+  width: 1.25rem;
+  margin-left: 2%;
+}
+
+.navbarSearch-close-icon {
+  margin-right: 2%;
+}
+
+.hiddenMenu {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.hiddenSearchBar {
+  display: none;
+}

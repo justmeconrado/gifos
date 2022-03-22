@@ -1,0 +1,255 @@
+.gif__container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  .gif {
+    margin: 0.5rem;
+    width: 8rem;
+    height: 6rem;
+  }
+
+  .gifActions {
+    display: none;
+  }
+
+  @media screen and (min-width: $iphone) {
+    .gif {
+      margin: 1rem;
+      width: 10rem;
+      height: 8rem;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    .gif {
+      width: 14rem;
+      height: 11rem;
+    }
+
+    .gifActions {
+      margin: 1rem;
+      display: block;
+      opacity: 0;
+      width: 14rem;
+      height: 11rem;
+      position: absolute;
+      top: 0;
+      background-color: $purpleTransparency;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 100;
+      }
+    }
+
+    .gifActions__btn {
+      width: 8rem;
+      padding: 4%;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      right: 0;
+
+      .btn {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+      }
+    }
+
+    .favorite {
+      background: url("/assets/icon-fav.svg") center no-repeat;
+
+      &:hover {
+        background: url("/assets/icon-fav-hover.svg") center no-repeat;
+      }
+
+      &:active {
+        background: url("/assets/icon-fav-active.svg") center no-repeat;
+      }
+    }
+
+    .download {
+      background: url("/assets/icon-download.svg") center no-repeat;
+
+      &:hover {
+        background: url("/assets/icon-download-hover.svg") center no-repeat;
+      }
+    }
+
+    .maximize {
+      background: url("/assets/icon-max-normal.svg") center no-repeat;
+
+      &:hover {
+        background: url("/assets/icon-max-hover.svg") center no-repeat;
+      }
+    }
+
+    .remove {
+      background: url("/assets/icon-trash-normal.svg") center no-repeat;
+
+      &:hover {
+        background: url("/assets/icon-trash-hover.svg") center no-repeat;
+      }
+    }
+
+    .gif__info {
+      position: absolute;
+      left: 8%;
+      bottom: 15%;
+      font-weight: 500;
+      text-align: left;
+      color: #fff;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    .gif {
+      width: 17rem;
+      height: 14rem;
+    }
+    .gifActions {
+      width: 17rem;
+      height: 14rem;
+    }
+  }
+
+  @media screen and (min-width: $genericLaptop) {
+    .gif {
+      width: 22rem;
+      height: 16rem;
+    }
+    .gifActions {
+      width: 22rem;
+      height: 16rem;
+    }
+  }
+}
+
+.maximizedGif {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2000;
+
+  body.darkMode & {
+    background-color: $backgroundDark;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.close-btn {
+  width: 2rem;
+  padding-bottom: 3rem;
+  margin-right: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+  background: url("/assets/close.svg") center no-repeat;
+
+  body.darkMode & {
+    background: url("/assets/close-modo-noct.svg") center no-repeat;
+  }
+}
+
+.gif__info {
+  color: black;
+  font-family: $secondary-font;
+  font-size: 14px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+
+  body.darkMode & {
+    color: #fff;
+  }
+}
+
+.gif_title {
+  font-weight: 500;
+}
+
+.gifMax {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.gifMaxActions {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gifMaxActions__btn {
+  display: flex;
+}
+
+.buttonsMax {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.8rem;
+  margin: 2px;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.downloadMax {
+  background: url("/assets/icon-download.svg") center no-repeat;
+
+  &:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+}
+
+.favoriteMax {
+  background: url("/assets/icon-fav.svg") center no-repeat;
+
+  &:hover {
+    background: url("/assets/icon-fav-hover.svg") center no-repeat;
+  }
+
+  &:active {
+    background: url("/assets/icon-fav-active.svg") center no-repeat;
+  }
+}
+
+.removeMax {
+  background: url("/assets/icon-trash-normal.svg") center no-repeat;
+
+  &:hover {
+    background: url("/assets/icon-trash-hover.svg") center no-repeat;
+  }
+}
+
+.linkOverlay {
+  background: url("/assets/icon-link-normal.svg") center no-repeat;
+
+  &:hover {
+    background: url("/assets/icon-link-hover.svg") center no-repeat;
+  }
+}
+
+.downloadOverlay {
+  background: url("/assets/icon-download.svg") center no-repeat;
+
+  &:hover {
+    background: url("/assets/icon-download-hover.svg") center no-repeat;
+  }
+}
